@@ -26,7 +26,7 @@ void test_InitCan()
     TEST_ASSERT_EQUAL_UINT32(0, canRxHeader.DLC);
 }
 
-// 2) Transmitr un byte
+// 2) Transmitir un byte con protocolo CAN
 void test_CanTransmittByte()
 {
     uint8_t byte[] = "A";
@@ -34,7 +34,7 @@ void test_CanTransmittByte()
     TEST_ASSERT_EQUAL_STRING(byte, canBufferTx);
 }
 
-// 3) Recibir un byte
+// 3) Recibir un byte con protocolo CAN
 void test_CanReceiveByte()
 {
     uint8_t BufferRx_temp[255];
@@ -43,7 +43,7 @@ void test_CanReceiveByte()
     TEST_ASSERT_EQUAL_STRING(canBufferRx, BufferRx_temp);
 }
 
-// 4) Transmitiendo caracteres
+// 4) Transmitiendo caracteres con protocolo CAN
 void test_transmision_un_string()
 {
     uint8_t string[] = "Conectando";
@@ -51,7 +51,7 @@ void test_transmision_un_string()
     TEST_ASSERT_EQUAL_STRING(string, canBufferTx);
 }
 
-// 5) Recibiendo caracteres
+// 5) Recibiendo caracteres con protocolo CAN
 void test_recepcion_un_string()
 {
     uint8_t BufferRx_temp[255];
